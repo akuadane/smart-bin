@@ -1,0 +1,6 @@
+realwaste-main/
+models/
+.waste_env/
+.ipynb_checkpoints
+uploaded/
+__pycache__/

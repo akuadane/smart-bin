@@ -1,0 +1,24 @@
+<div class="container">
+  <div *ngFor="let can of trashCans" class="trash-block" 
+       [class.highlight]="can.highlight"
+       (drop)="onDrop(can)" 
+       (dragover)="allowDrop($event)">
+    <input [(ngModel)]="can.title" placeholder="Enter title" class="title-input">
+    <div class="box" [class.box-glow]="box_to_highlight === box" *ngFor="let box of can.boxes" draggable="true" (dragstart)="onDragStart(box)">
+      {{ box }}
+    </div>
+  </div>
+  <button class="add-button" (click)="addTrashCan()">+</button>
+</div>
+
+<div class="upload-container">
+  <h2>Upload Image</h2>
+  <div class="upload-row">
+    <div class="upload-column">
+      <input type="file" (change)="onFileSelected($event)" class="upload-button">
+    </div>
+    <div class="image-column">
+      <img *ngIf="imagePreview" [src]="imagePreview" alt="Selected Image" class="preview">
+    </div>
+  </div>
+</div>

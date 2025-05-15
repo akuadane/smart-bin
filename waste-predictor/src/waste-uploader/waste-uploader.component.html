@@ -1,0 +1,4 @@
+<h2>Upload Waste Image</h2>
+<input type="file" (change)="onFileSelected($event)">
+<button (click)="predict()">Predict</button>
+<p *ngIf="prediction">Prediction: {{ prediction }}</p>
