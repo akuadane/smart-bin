@@ -1,6 +1,8 @@
 realwaste-main/
-models/
+models/*
+!models/resnet18_whole.pth
 .waste_env/
 .ipynb_checkpoints
-uploaded/
+uploaded/*
+!uploaded/.gitkeep
 __pycache__/
